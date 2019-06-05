@@ -2,11 +2,14 @@
 <html>
 
 <head>
-	<title> Test Site </title>
+	<title> Test Site - Login </title>
 </head>
 
 <body>
-	<p> Hello! Current user: {{user}} </p>
+	<p> Log in: </p>
+	{% for message in get_flashed_messages(): %}
+		<p> {{ message }} </p>
+	{% endfor %}
 	<br>
 	<form method = "post">
 		<label for="username">Username:</label>

@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+
+<head>
+	<title> Test Site - Register </title>
+</head>
+
+<body>
+	<p> Register account: </p>
+	{% for message in get_flashed_messages(): %}
+		<p> {{ message }} </p>
+	{% endfor %}
+	<br>
+	<form method = "post">
+		<label for="username">Username:</label>
+		<input name="username" required><br>
+		<label for="password">Password:</label>
+		<input name="password" type="password" required><br>
+		<label for="password_confirm">Confirm Password:</label>
+		<input name="password_confirm" type="password" required><br>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+
+</html>
